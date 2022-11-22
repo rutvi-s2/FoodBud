@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/letSwipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:text="Swipe to Eat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:text="Location (zipcode):"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/letSwipeName"
+            app:layout_constraintVertical_bias="0.084" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="311dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="5"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            app:layout_constraintVertical_bias="0.029" />
+
+        <ImageView
+            android:id="@+id/locationPin"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/location"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/desiredCuisineName"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="Desired Cuisine:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintVertical_bias="0.113" />
+
+        <Spinner
+            android:id="@+id/desiredCuisineSpinner"
+            android:layout_width="310dp"
+            android:layout_height="58dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisineName"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/desiredTimeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:text="Desired Time to Eat:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisineSpinner"
+            app:layout_constraintVertical_bias="0.151" />
+
+        <Button
+            android:id="@+id/desiredTimeBtn"
+            android:layout_width="311dp"
+            android:layout_height="49dp"
+            android:background="#D5CDCD"
+            android:backgroundTint="#E3E0E0"
+            android:ems="10"
+            android:scaleType="centerCrop"
+            android:text="Select Time"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeName"
+            app:layout_constraintVertical_bias="0.093" />
+
+        <Button
+            android:id="@+id/start_swiping"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:text="Start Swiping"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn"
+            app:layout_constraintVertical_bias="0.889" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
