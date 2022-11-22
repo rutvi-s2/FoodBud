@@ -35,7 +35,7 @@ class RestaurantCardAdapter (
         val restaurantImageView: ImageView = view!!.findViewById(R.id.restaurant_grid_image)
         val restaurantNameTextView: TextView = view!!.findViewById(R.id.restaurant_grid_name)
         val restaurantDistanceTextView: TextView = view!!.findViewById(R.id.restaurant_grid_distance)
-        val restaurantHoursTextView: TextView = view!!.findViewById(R.id.restaurant_grid_hours)
+        val restaurantLocationTextView: TextView = view!!.findViewById(R.id.restaurant_grid_location)
 
         // set up the onClick so restaurant card can be clickable in order to view YELP screen
         init {
@@ -81,7 +81,7 @@ class RestaurantCardAdapter (
         holder.restaurantNameTextView.text = restaurant.name
         //show rating for now
         holder.restaurantDistanceTextView.text = restaurant.displayDistance()
-        holder.restaurantHoursTextView.text = restaurant.location.address
+        holder.restaurantLocationTextView.text = restaurant.location.displayLocation()
         Glide.with(context).load(restaurant.imageUrl).apply(
             RequestOptions().transforms(
                 CenterCrop(), RoundedCorners(20)

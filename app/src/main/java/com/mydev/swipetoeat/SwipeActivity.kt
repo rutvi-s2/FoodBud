@@ -22,6 +22,7 @@ class SwipeActivity : AppCompatActivity() {
     private lateinit var adapter: SwipeAdapter
     private lateinit var list: MutableList<YelpRestaurant>
     private lateinit var koloda: Koloda
+    private lateinit var toast : Toast
     //    var mediaPlayer : MediaPlayer? = null
     var countSwiped : Int = 0
     private lateinit var binding : ActivitySwipeBinding
@@ -78,6 +79,9 @@ class SwipeActivity : AppCompatActivity() {
                 }, 1000)
 
                 countSwiped++
+//                if (toast!= null) {
+//                    toast.cancel();
+//                }
                 val toast = Toast.makeText(applicationContext, text, duration)
                 toast.show()
             }
@@ -109,6 +113,9 @@ class SwipeActivity : AppCompatActivity() {
 
 
                 countSwiped++
+//                if (toast!= null) {
+//                    toast.cancel()
+//                }
                 val toast = Toast.makeText(applicationContext, text, duration)
                 toast.show()
 

@@ -25,8 +25,9 @@ class SurpriseMeActivity : AppCompatActivity() {
         val extras = intent.extras
         val restaurant: YelpRestaurant = DataSource.swipedRightRestaurants[extras?.getInt("restaurantIndex")!!]
         binding.restaurantGridName.text = restaurant.name
-        binding.restaurantGridHours.text = restaurant.location.address
-        binding.restaurantGridDistance.text = restaurant.displayDistance()
+        binding.restaurantGridLocation.text = restaurant.location.displayLocation()
+        binding.restaurantGridReviews.text = restaurant.numReviews.toString() + " reviews"
+        binding.restaurantGridDistance.text = restaurant.displayDistance() + " from current location"
         // Declaring executor to parse the URL
         val executor = Executors.newSingleThreadExecutor()
         // Once the executor parses the URL and receives the image, handler will load it

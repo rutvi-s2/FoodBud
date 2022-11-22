@@ -14,12 +14,15 @@
 
         <TextView
             android:id="@+id/letsSwipeName"
-            android:layout_width="721dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:autoSizeMaxTextSize="50sp"
             android:autoSizeMinTextSize="30sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:paddingTop="5dp"
             android:scaleType="centerCrop"
@@ -35,6 +38,8 @@
         <TextView
             android:id="@+id/desiredCuisine"
             android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_height="80dp"
             android:autoSizeMaxTextSize="80sp"
             android:autoSizeMinTextSize="12sp"
@@ -42,13 +47,14 @@
             android:autoSizeTextType="uniform"
             android:gravity="center"
             android:scaleType="centerCrop"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133"
+            app:layout_constraintVertical_bias="0.1"
             tools:text="Desired Cuisine: Mexican" />
 
 
@@ -79,7 +85,7 @@
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/koloda"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintVertical_bias="0.2" />
 
         <Button
             android:id="@+id/reset"
@@ -92,7 +98,7 @@
             app:layout_constraintHorizontal_bias="0.073"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/koloda"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintVertical_bias="0.2" />
 
         <ImageView
             android:id="@+id/thumbs_up"
@@ -101,7 +107,7 @@
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@id/koloda"
+            app:layout_constraintTop_toTopOf="@id/koloda"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +118,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@id/koloda"
+            app:layout_constraintTop_toTopOf="@id/koloda"
             app:layout_constraintEnd_toEndOf="parent"
             android:visibility="gone"
             app:layout_constraintHorizontal_bias="0.048"
