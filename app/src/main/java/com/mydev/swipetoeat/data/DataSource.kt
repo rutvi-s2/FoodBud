@@ -11,8 +11,8 @@ object DataSource {
 
     var restaurants: MutableList<YelpRestaurant> = mutableListOf()
 
-    val cuisines = listOf("Asian Fusion", "Australian", "Barbeque", "Bistros", "Breakfast & Brunch", "Buffets", "Burgers", "Cafes", "Chinese", "Comfort Food", "Delis", "Diners", "Ethiopian", "Fish & Chips", "Hawaiian", "Fast Food", "Indian", "Italian", "Korean", "Mediterranean", "Mexican", "Mongolian", "Pizza", "Sandwiches", "Seafood", "Sushi Bars", "Tex-Mex", "Thai", "Vegan", "Vegetarian", "Waffles")
-    var cuisineAlias = listOf("asianfusion", "australian", "bbq", "bistros", "breakfast_brunch", "buffets", "burgers", "cafes", "chinese", "comfortfood", "delis", "diners", "ethiopian", "fishnchips", "hawaiian", "hotdogs", "indpak", "italian", "korean", "mediterranean", "mexican", "mongolian", "pizza", "sandwiches", "seafood", "sushi", "tex-mex", "thai", "vegan", "vegetarian", "waffles")
+    val cuisines = listOf<String>("Italian", "Chinese", "Indian", "Mexican", "American", "French", "Greek", "Thai", "Japanese", "Turkish", "Moroccan", "Korean", "German", "South African", "Lebanese", "Portuguese", "Vietnamese", "Belgian", "Pakistani", "Australian", "Brazilian", "Nepalese", "Russian", "Filipino", "Peruvian", "Ethiopian")
+    var cuisineAlias = listOf<String>("italian", "chinese", "indpak", "mexican", "tradamerican", "french", "greek", "thai", "japanese", "turkish", "moroccan", "korean", "german", "southafrican", "lebanese", "portuguese", "vietnamese", "belgian", "pakistani", "australian", "brazilian", "himalayan", "russian", "filipino", "peruvian", "ethiopian")
 
     var swipedRightRestaurants: MutableList<YelpRestaurant> = mutableListOf()
 }
