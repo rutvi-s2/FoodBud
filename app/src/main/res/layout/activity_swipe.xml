@@ -73,6 +73,46 @@
 
         </com.yalantis.library.Koloda>
 
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="80sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="There are no available restaurants open at the location
+you entered, for the time you entered. Please modify your preferences and try again!"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#B0F44336"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
+            app:layout_constraintVertical_bias="0.25"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/start_over"
+            android:layout_width="150dp"
+            android:layout_height="71dp"
+            android:scaleType="centerCrop"
+            android:text="Go Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/endText"
+            app:layout_constraintVertical_bias="0.1"
+            android:visibility="invisible"/>
 
         <Button
             android:id="@+id/done_swiping"

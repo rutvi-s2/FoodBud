@@ -41,6 +41,11 @@ class SwipeActivity : AppCompatActivity() {
         } else {
             displayCuisine = "Desired Cuisine: $chosenCuisine"
         }
+
+        if(DataSource.restaurants.isEmpty()){
+            binding.endText.visibility = View.VISIBLE
+            binding.startOver.visibility = View.VISIBLE
+        }
         binding.desiredCuisine.text = displayCuisine
 
 
@@ -139,6 +144,14 @@ class SwipeActivity : AppCompatActivity() {
             }
             val intent = Intent(this, FindRestaurantActivity::class.java)
             startActivity(intent)
+        }
+
+        val goBack = findViewById<Button>(R.id.start_over)
+        goBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            DataSource.restaurants.clear()
+            DataSource.swipedRightRestaurants.clear()
         }
 
         val reset = findViewById<Button>(R.id.reset)
