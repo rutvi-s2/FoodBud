@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/letSwipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="236dp"
+            android:fontFamily="serif"
+            android:scaleType="centerCrop"
+            android:text="Swipe to Eat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="#E3818E"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:scaleType="centerCrop"
+            android:text="Enter Zipcode:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/letSwipeName"
+            app:layout_constraintVertical_bias="0.053" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="311dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="5"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.552"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            app:layout_constraintVertical_bias="0.018" />
+
+        <ImageView
+            android:id="@+id/locationPin"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.132"
+            app:layout_constraintStart_toEndOf="@id/location"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/desiredCuisineName"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="Desired Cuisine:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <Spinner
+            android:id="@+id/desiredCuisineSpinner"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisineName"
+            app:layout_constraintVertical_bias="0.044" />
+
+        <TextView
+            android:id="@+id/desiredTimeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:scaleType="centerCrop"
+            android:text="Desired Time to Eat:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.566"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisineSpinner"
+            app:layout_constraintVertical_bias="0.06" />
+
+        <Button
+            android:id="@+id/desiredTimeBtn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="#D5CDCD"
+            android:backgroundTint="#E3E0E0"
+            android:ems="10"
+            android:scaleType="centerCrop"
+            android:text="Select Time"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeName"
+            app:layout_constraintVertical_bias="0.194" />
+
+        <Button
+            android:id="@+id/start_swiping"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="72dp"
+            android:scaleType="centerCrop"
+
+            android:text="Start Swiping"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn" />
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/letSwipeName"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.054"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/selected_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#E3818E"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn"
+            app:layout_constraintVertical_bias="0.306"
+            tools:text="December 21, 2022 10:15 pm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
