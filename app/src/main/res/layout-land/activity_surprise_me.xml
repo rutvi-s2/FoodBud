@@ -46,10 +46,10 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_image"
                 app:layout_constraintTop_toBottomOf="@id/restaurant_grid_image"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.016" />
 
             <TextView
                 android:id="@+id/restaurant_grid_distance"
@@ -80,7 +80,7 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_reviews"
                 app:layout_constraintVertical_bias="0.0"
@@ -98,7 +98,7 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_name"
                 app:layout_constraintVertical_bias="0.0"
