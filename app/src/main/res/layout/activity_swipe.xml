@@ -100,6 +100,32 @@ you entered, for the time you entered. Please modify your preferences and try ag
             app:layout_constraintVertical_bias="0.25"
             android:visibility="invisible"/>
 
+        <TextView
+            android:id="@+id/doneSwipingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="80sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="WOOHOO! You are done swiping. Click the button below to proceed!"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#B0F44336"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
+            app:layout_constraintVertical_bias="0.35"
+            android:visibility="invisible"/>
+
+
         <Button
             android:id="@+id/start_over"
             android:layout_width="150dp"

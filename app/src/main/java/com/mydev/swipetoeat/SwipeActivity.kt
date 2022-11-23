@@ -89,6 +89,10 @@ class SwipeActivity : AppCompatActivity() {
                 }
                 toast = Toast.makeText(applicationContext, text, duration)
                 toast!!.show()
+
+                if(position == list.size - 2){
+                    binding.doneSwipingText.visibility = View.VISIBLE
+                }
             }
 
             override fun onCardSwipedRight(position: Int) {
@@ -127,6 +131,10 @@ class SwipeActivity : AppCompatActivity() {
                 // get the restaurant swiped right on
                 val restaurant: YelpRestaurant = list[position + 1]
                 DataSource.swipedRightRestaurants.add(restaurant)
+
+                if(position == list.size - 2){
+                    binding.doneSwipingText.visibility = View.VISIBLE
+                }
             }
 
         }
