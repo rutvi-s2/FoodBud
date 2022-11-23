@@ -19,9 +19,9 @@
             android:layout_marginEnd="8dp"
             android:fontFamily="serif"
             android:scaleType="centerCrop"
-            android:text="Swipe to Eat"
+            android:text="@string/swipe_to_eat"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textColor="#E3818E"
+            android:textColor="#F06292"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="serif"
             android:scaleType="centerCrop"
-            android:text="Enter Zipcode:"
+            android:text="@string/enter_zipcode"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,8 @@
             app:layout_constraintHorizontal_bias="0.321"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/locationName"
-            app:layout_constraintVertical_bias="0.029" />
+            app:layout_constraintVertical_bias="0.029"
+            android:autofillHints="" />
 
         <ImageView
             android:id="@+id/locationPin"
@@ -67,7 +68,8 @@
             app:layout_constraintStart_toEndOf="@id/location"
             app:layout_constraintTop_toBottomOf="@id/locationName"
             app:layout_constraintVertical_bias="0.03"
-            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+            app:srcCompat="@drawable/ic_baseline_location_on_24"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/desiredCuisineName"
@@ -76,7 +78,7 @@
             android:gravity="center"
             android:fontFamily="serif"
             android:scaleType="centerCrop"
-            android:text="Desired Cuisine:"
+            android:text="@string/desired_cuisine"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:text="Desired Time to Eat:"
+            android:text="@string/desired_time_to_eat"
             android:fontFamily="serif"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -120,7 +122,7 @@
             android:backgroundTint="#E3E0E0"
             android:ems="10"
             android:scaleType="centerCrop"
-            android:text="Select Time"
+            android:text="@string/select_time"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:scaleType="centerCrop"
-            android:text="Start Swiping"
+            android:text="@string/start_swiping"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -145,16 +147,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            tools:text="December 21, 2022 10:15 pm"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="#E3818E"
+            android:textColor="#F06292"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn"
-            app:layout_constraintVertical_bias="0.05" />
+            app:layout_constraintVertical_bias="0.05"
+            tools:text="December 21, 2022 10:15 pm" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

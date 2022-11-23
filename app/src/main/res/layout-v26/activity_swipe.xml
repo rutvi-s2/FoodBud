@@ -26,7 +26,7 @@
             android:gravity="center"
             android:paddingTop="5dp"
             android:scaleType="centerCrop"
-            android:text="Let's Swipe!"
+            android:text="@string/let_swipe"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/desiredCuisine"
@@ -84,8 +84,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:scaleType="centerCrop"
-            android:text="There are no available restaurants open at the location
-you entered, for the time you entered. Please modify your preferences and try again!"
+            android:text="@string/none_available"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -111,7 +110,7 @@ you entered, for the time you entered. Please modify your preferences and try ag
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:scaleType="centerCrop"
-            android:text="WOOHOO! You are done swiping. Click the button below to proceed!"
+            android:text="@string/swiped_all"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -131,7 +130,7 @@ you entered, for the time you entered. Please modify your preferences and try ag
             android:layout_width="150dp"
             android:layout_height="71dp"
             android:scaleType="centerCrop"
-            android:text="Go Back"
+            android:text="@string/go_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -145,7 +144,8 @@ you entered, for the time you entered. Please modify your preferences and try ag
             android:layout_width="150dp"
             android:layout_height="71dp"
             android:scaleType="centerCrop"
-            android:text="Done Swiping"
+            android:text="@string/done_swiping"
+            android:textColor="#311B92"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.934"
@@ -165,7 +165,8 @@ you entered, for the time you entered. Please modify your preferences and try ag
             app:layout_constraintHorizontal_bias="0.073"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/koloda"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="0.2"
+            tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:id="@+id/thumbs_up"
