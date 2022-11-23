@@ -120,7 +120,6 @@ class SwipeActivity : AppCompatActivity() {
 //                playAudio()
 //                MyService().onCreate()
 
-
                 countSwiped++
                 if (toast!= null) {
                     toast!!.cancel()
@@ -165,10 +164,9 @@ class SwipeActivity : AppCompatActivity() {
         val reset = findViewById<Button>(R.id.reset)
         reset.setOnClickListener{
             list = (DataSource.restaurants).toCollection(mutableListOf())
-            adapter = SwipeAdapter(this, list)
-            koloda.adapter = adapter
             DataSource.swipedRightRestaurants.clear()
-
+            finish()
+            startActivity(getIntent())
             Log.d("the second length is", list.size.toString())
         }
 
