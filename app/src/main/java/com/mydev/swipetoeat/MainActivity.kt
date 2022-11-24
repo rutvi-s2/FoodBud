@@ -19,10 +19,10 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.mydev.swipetoeat.data.DataSource
-import com.mydev.swipetoeat.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.mydev.swipetoeat.data.DataSource
+import com.mydev.swipetoeat.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,6 +55,17 @@ class MainActivity : AppCompatActivity()  {
         DataSource.restaurants.clear()
         DataSource.swipedRightRestaurants.clear()
 
+        var thread: Thread = object : Thread() {
+            override fun run() {
+                try {
+                    sleep(Toast.LENGTH_LONG.toLong()) // As I am using LENGTH_LONG in Toast
+                    finish()
+                    System.exit(0)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         val cuisineAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
@@ -111,6 +122,12 @@ class MainActivity : AppCompatActivity()  {
 
                 override fun onFailure(call: Call<YelpSearchResult>, t: Throwable) {
                     Log.i(TAG, "onFailure $t")
+                    val text = "Please check WIFI connection and re-open app"
+                    val duration = Toast.LENGTH_LONG
+
+                    val toast = Toast.makeText(applicationContext, text, duration)
+                    toast.show()
+                    thread.start()
                 }
             })
         }
@@ -192,6 +209,7 @@ class MainActivity : AppCompatActivity()  {
 
         }
     }
+
 
     private fun getCurrentLocation(){
         if(checkPermissions()){
