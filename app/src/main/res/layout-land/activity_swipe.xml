@@ -12,36 +12,37 @@
         <!--        android:layout_height="match_parent"-->
         <!--        tools:context=".SwipeActivity">-->
 
+
         <TextView
             android:id="@+id/letsSwipeName"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="20sp"
+            android:layout_width="235dp"
+            android:layout_height="24dp"
+
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="15sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
+            android:paddingLeft="10dp"
             android:paddingTop="5dp"
+            android:paddingRight="10dp"
             android:scaleType="centerCrop"
             android:text="Let's Swipe!"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/desiredCuisine"
             app:layout_constraintBottom_toTopOf="@+id/desiredCuisine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
+            app:layout_constraintVertical_bias="0.533" />
 
         <TextView
             android:id="@+id/desiredCuisine"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="20sp"
+            android:layout_height="20dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
@@ -49,31 +50,31 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:scaleType="centerCrop"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.061"
+            app:layout_constraintVertical_bias="0.086"
             tools:text="Desired Cuisine: Mexican" />
 
         <com.yalantis.library.Koloda
             android:id="@+id/koloda"
-            android:layout_width="350dp"
-            android:layout_height="298dp"
+            android:layout_width="345dp"
+            android:layout_height="305dp"
             android:scaleType="centerCrop"
-            app:koloda_card_layout="@layout/item_koloda"
+            app:koloda_card_layout="@layout/item_koloda_land"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="0.145">
 
                 <TextView
                     android:id="@+id/endText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="243dp"
                     android:autoSizeMaxTextSize="80sp"
                     android:autoSizeMinTextSize="12sp"
                     android:autoSizeStepGranularity="2sp"
@@ -91,7 +92,6 @@
                     android:textStyle="italic"
                     android:visibility="invisible" />
         </com.yalantis.library.Koloda>
-
 
         <TextView
             android:id="@+id/doneSwipingText"
@@ -124,13 +124,13 @@
             android:layout_height="71dp"
             android:scaleType="centerCrop"
             android:text="Go Back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/reset"
+            app:layout_constraintEnd_toStartOf="@+id/koloda"
+            app:layout_constraintHorizontal_bias="0.027"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/endText"
-            app:layout_constraintVertical_bias="0.1"
-            android:visibility="invisible"/>
+            app:layout_constraintTop_toBottomOf="@+id/desiredCuisine"
+            app:layout_constraintVertical_bias="0.045" />
 
         <Button
             android:id="@+id/done_swiping"
@@ -141,8 +141,8 @@
             android:text="Done Swiping"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.955"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toEndOf="@id/koloda" />
 
         <Button
             android:id="@+id/reset"
@@ -152,9 +152,9 @@
             android:scaleType="centerCrop"
             android:text="Reset"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.073"
 
+            app:layout_constraintEnd_toStartOf="@id/koloda"
+            app:layout_constraintHorizontal_bias="0.29"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
