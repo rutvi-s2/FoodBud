@@ -200,7 +200,7 @@ class MainActivity : AppCompatActivity()  {
                 timeInput = (myDt.time / 1000).toInt()
 
                 Log.d("my time", timeInput.toString())
-                binding.selectedTimeText.text = date + " " + time
+                binding.selectedTimeText.text = date + " " + time + "CT"
             },
                 now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), false)
             timePicker.show()
