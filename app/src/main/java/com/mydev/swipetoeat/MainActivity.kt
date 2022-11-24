@@ -1,6 +1,7 @@
 package com.mydev.swipetoeat
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity()  {
     var chosenCuisine : String = ""
     private var timeInput : Int = (System.currentTimeMillis()/1000).toInt()
     private var timeInputStr : String = ""
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,11 +117,13 @@ class MainActivity : AppCompatActivity()  {
 
                         return
                     }
-                    restaurants.addAll(body.restaurants)
-                    for (restaurant in restaurants){
-                        if(restaurant.imageUrl == ""){
+//                    restaurants.addAll(body.restaurants)
+                    for (cur in body.restaurants){
+                        if(cur.imageUrl != ""){
+                            Log.i("not removed", "not removed restaurant")
+                            restaurants.add(cur)
+                        } else{
                             Log.i("removed", "removed restaurant")
-                            restaurants.remove(restaurant)
                         }
                     }
 
@@ -200,7 +204,7 @@ class MainActivity : AppCompatActivity()  {
                 timeInput = (myDt.time / 1000).toInt()
 
                 Log.d("my time", timeInput.toString())
-                binding.selectedTimeText.text = date + " " + time + "CT"
+                binding.selectedTimeText.text = "$date $time CT"
             },
                 now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), false)
             timePicker.show()
