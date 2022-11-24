@@ -6,20 +6,20 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".SwipeActivity">
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_height="match_parent"-->
-<!--        tools:context=".SwipeActivity">-->
+        <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:orientation="vertical"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        tools:context=".SwipeActivity">-->
 
         <TextView
             android:id="@+id/letsSwipeName"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:autoSizeMaxTextSize="50sp"
-            android:autoSizeMinTextSize="30sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="20sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
@@ -35,33 +35,33 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+
         <TextView
             android:id="@+id/desiredCuisine"
             android:layout_width="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_height="80dp"
-            android:autoSizeMaxTextSize="80sp"
-            android:autoSizeMinTextSize="12sp"
+            android:layout_height="60dp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="20sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
-            android:gravity="center"
-            android:scaleType="centerCrop"
             android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerCrop"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintVertical_bias="0.061"
             tools:text="Desired Cuisine: Mexican" />
-
 
         <com.yalantis.library.Koloda
             android:id="@+id/koloda"
-            android:layout_width="393dp"
-            android:layout_height="500dp"
+            android:layout_width="398dp"
+            android:layout_height="435dp"
             android:scaleType="centerCrop"
             app:koloda_card_layout="@layout/item_koloda"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -153,20 +153,6 @@ you entered, for the time you entered. Please modify your preferences and try ag
             app:layout_constraintTop_toBottomOf="@id/koloda"
             app:layout_constraintVertical_bias="0.2" />
 
-        <Button
-            android:id="@+id/reset"
-            android:layout_width="130dp"
-            android:layout_height="71dp"
-            android:scaleType="centerCrop"
-            android:text="Reset"
-            android:textColor="#311B92"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.073"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/koloda"
-            app:layout_constraintVertical_bias="0.2" />
-
         <ImageView
             android:id="@+id/thumbs_up"
             android:layout_width="80dp"
@@ -192,6 +178,16 @@ you entered, for the time you entered. Please modify your preferences and try ag
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/thumbs_down" />
 
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="130dp"
+            android:layout_height="71dp"
+            android:scaleType="centerCrop"
+            android:text="Reset"
+            android:textColor="#311B92"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="561dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
