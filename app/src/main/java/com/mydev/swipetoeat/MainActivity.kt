@@ -227,7 +227,7 @@ class MainActivity : AppCompatActivity()  {
                 }
                 val location: Location? = getLastKnownLocation()
                 if(location == null) {
-                    Toast.makeText(this, "Exception: Location not fetched", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Exception: Location not fetched. Enter Manually.", Toast.LENGTH_SHORT).show()
                 } else{
                     val geocoder = Geocoder(this, Locale.getDefault())
                     val addresses: List<Address> = geocoder.getFromLocation(location.latitude, location.longitude, 1)
