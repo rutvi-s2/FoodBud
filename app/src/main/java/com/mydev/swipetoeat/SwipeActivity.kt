@@ -45,6 +45,8 @@ class SwipeActivity : AppCompatActivity() {
         if(DataSource.restaurants.isEmpty()){
             binding.endText.visibility = View.VISIBLE
             binding.startOver.visibility = View.VISIBLE
+            binding.reset.visibility = View.INVISIBLE
+            binding.doneSwiping.visibility = View.INVISIBLE
         }
         binding.desiredCuisine.text = displayCuisine
 

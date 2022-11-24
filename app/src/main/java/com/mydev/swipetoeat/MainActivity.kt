@@ -159,13 +159,18 @@ class MainActivity : AppCompatActivity()  {
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
                 time = timeFormatter.format(selectedTime.time)
-                timeInputStr = if(time.substring(time.length- 2, time.length-1) == "P"){
-                    date + " " + (Calendar.HOUR_OF_DAY + 12).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
-                } else{
-                    date + " " + (Calendar.HOUR_OF_DAY).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
-                }
+//                timeInputStr = if(time.substring(time.length- 2, time.length-1) == "P"){
+//                    date + " " + (Calendar.HOUR_OF_DAY + 12).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
+//                } else{
+//                    date + " " + (Calendar.HOUR_OF_DAY).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
+//                }
+                val displayFormat = SimpleDateFormat("HH:mm")
+                val parseFormat = SimpleDateFormat("hh:mm a")
+                val myTime = parseFormat.parse(time)
 
-                val df = SimpleDateFormat("MMM dd yyyy hh:mm:ss.SSS zzz")
+                timeInputStr = date + " " + displayFormat.format(myTime) + ":00.000"
+
+                val df = SimpleDateFormat("MMM dd yyyy hh:mm:ss.SSS")
                 val myDt : Date = df.parse(timeInputStr)
                 timeInput = (myDt.time / 1000).toInt()
 
