@@ -127,7 +127,7 @@
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/reset"
             app:layout_constraintEnd_toStartOf="@+id/koloda"
-            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintHorizontal_bias="0.372"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/desiredCuisine"
             app:layout_constraintVertical_bias="0.045" />
