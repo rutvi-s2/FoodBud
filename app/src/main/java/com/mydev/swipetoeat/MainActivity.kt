@@ -116,7 +116,15 @@ class MainActivity : AppCompatActivity()  {
                         return
                     }
                     restaurants.addAll(body.restaurants)
+                    for (restaurant in restaurants){
+                        if(restaurant.imageUrl == ""){
+                            Log.i("removed", "removed restaurant")
+                            restaurants.remove(restaurant)
+                        }
+                    }
+
                     DataSource.restaurants = restaurants
+
                     Log.i("we get in here", "omg")
                 }
 
