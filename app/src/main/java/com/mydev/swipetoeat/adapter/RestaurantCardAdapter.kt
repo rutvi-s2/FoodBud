@@ -21,8 +21,7 @@ class RestaurantCardAdapter (
 ): RecyclerView.Adapter<RestaurantCardAdapter.RestaurantCardViewHolder>() {
 
 
-    // initialize the data using the restaurants List found in DataSource
-//    private var restaurants: List<YelpRestaurant> = DataSource.restaurants
+    // initialize the data using the swiped right restaurants List found in DataSource
     private var restaurants: List<YelpRestaurant> = DataSource.swipedRightRestaurants
 
 
@@ -75,8 +74,7 @@ class RestaurantCardAdapter (
     override fun onBindViewHolder(holder: RestaurantCardAdapter.RestaurantCardViewHolder, position: Int) {
         //get the data at the current position
         val restaurant = restaurants[position]
-//        holder.restaurantImageView.setImageBitmap(restaurant.imageResourceBitmap)
-//        holder.restaurantImageView.setImageResource(restaurant.imageResourceBitmap)
+
         //set text for name, distance, and hours of restaurant
         holder.restaurantNameTextView.text = restaurant.name
         //show rating for now
@@ -86,9 +84,6 @@ class RestaurantCardAdapter (
             RequestOptions().transforms(
                 CenterCrop(), RoundedCorners(20)
         )).into(holder.restaurantImageView)
-
-//        holder.restaurantDistanceTextView.text = restaurant.distance
-//        holder.restaurantHoursTextView.text = restaurant.hours
 
     }
 
