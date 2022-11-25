@@ -3,17 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/activity_find_restaurant.xml" value="0.2" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/activity_main.xml" value="0.1609347442680776" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/activity_surprise_me.xml" value="0.2" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/activity_swipe.xml" value="0.264" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/item_koloda.xml" value="0.1" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-land/item_koloda_land.xml" value="0.152" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout-v26/activity_swipe.xml" value="0.2" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/activity_find_restaurant.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/activity_surprise_me.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/activity_swipe.xml" value="0.1" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/item_koloda.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/item_koloda_land.xml" value="0.2" />
+        <entry key="..\:/Users/abbyn/AndroidStudioProjects/SwipeToEat2/app/src/main/res/layout/restaurant_grid_item.xml" value="0.10729166666666666" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_arrow_left_alt_128.xml" value="0.1" />
-        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.18504273504273505" />
-        <entry key="app/src/main/res/layout-land/activity_swipe.xml" value="0.18504273504273505" />
-        <entry key="app/src/main/res/layout-land/item_koloda_land.xml" value="0.14109347442680775" />
-        <entry key="app/src/main/res/layout-v26/activity_swipe.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_find_restaurant.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_surprise_me.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_swipe.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/item_koloda.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/item_koloda_land.xml" value="0.1841880341880342" />
         <entry key="app/src/main/res/layout/restaurant_grid_item.xml" value="0.19610507246376813" />
       </map>
     </option>
