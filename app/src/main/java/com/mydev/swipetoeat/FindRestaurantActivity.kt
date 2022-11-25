@@ -5,21 +5,17 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mydev.swipetoeat.adapter.RestaurantCardAdapter
 import com.mydev.swipetoeat.data.DataSource
 import com.mydev.swipetoeat.databinding.ActivityFindRestaurantBinding
-import java.util.*
 import kotlin.random.Random
 
 
 private const val BASE_URL = "https://www.yelp.com/biz/"
 class FindRestaurantActivity : AppCompatActivity(), RestaurantCardAdapter.OnItemClickListener{
     private lateinit var binding: ActivityFindRestaurantBinding
-    private val mWebsiteEditText: EditText? = null
     // Creates layout for find restaurant page and makes it scrollable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +51,7 @@ class FindRestaurantActivity : AppCompatActivity(), RestaurantCardAdapter.OnItem
         }
 
         // start over button
-        binding.startOver?.setOnClickListener {
+        binding.startOver.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             DataSource.restaurants.clear()

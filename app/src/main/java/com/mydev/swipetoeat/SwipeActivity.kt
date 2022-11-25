@@ -9,9 +9,6 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.mydev.swipetoeat.FindRestaurantActivity
-import com.mydev.swipetoeat.R
-import com.mydev.swipetoeat.YelpRestaurant
 import com.mydev.swipetoeat.adapter.SwipeAdapter
 import com.mydev.swipetoeat.data.DataSource
 import com.mydev.swipetoeat.databinding.ActivitySwipeBinding
@@ -35,7 +32,7 @@ class SwipeActivity : AppCompatActivity() {
         // set the cuisine the user chose to the text shown on the screen
         val extras = intent.extras
         val chosenCuisine: String = extras?.getString("chosen cuisine")!!
-        var displayCuisine = ""
+        val displayCuisine: String
         if (chosenCuisine.isEmpty()) {
             displayCuisine = "Desired Cuisine: All"
         } else {
@@ -55,7 +52,7 @@ class SwipeActivity : AppCompatActivity() {
         koloda = findViewById(R.id.koloda)
 
         list = (DataSource.restaurants).toCollection(mutableListOf())
-        adapter = SwipeAdapter(this, list)
+        adapter = SwipeAdapter(this)
         koloda.adapter = adapter
         Log.d("the first length is", list.size.toString())
 
@@ -66,7 +63,6 @@ class SwipeActivity : AppCompatActivity() {
             override fun onCardSwipedLeft(position: Int) {
                 val text = "DISLIKE!"
                 val duration = Toast.LENGTH_SHORT
-//                playAudio()
 
                 // fade in
                 binding.thumbsDown.visibility = View.VISIBLE
@@ -119,8 +115,6 @@ class SwipeActivity : AppCompatActivity() {
                     binding.thumbsUp.visibility = View.GONE
                 }, 1000)
 
-//                playAudio()
-//                MyService().onCreate()
 
                 countSwiped++
                 if (toast!= null) {
@@ -168,7 +162,7 @@ class SwipeActivity : AppCompatActivity() {
             list = (DataSource.restaurants).toCollection(mutableListOf())
             DataSource.swipedRightRestaurants.clear()
             finish()
-            startActivity(getIntent())
+            startActivity(intent)
             Log.d("the second length is", list.size.toString())
         }
 

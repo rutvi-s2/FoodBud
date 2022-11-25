@@ -32,6 +32,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.system.exitProcess
 
 
 private const val TAG = "MainActivity"
@@ -57,12 +58,12 @@ class MainActivity : AppCompatActivity()  {
         DataSource.restaurants.clear()
         DataSource.swipedRightRestaurants.clear()
 
-        var thread: Thread = object : Thread() {
+        val thread: Thread = object : Thread() {
             override fun run() {
                 try {
                     sleep(Toast.LENGTH_LONG.toLong()) // As I am using LENGTH_LONG in Toast
                     finish()
-                    System.exit(0)
+                    exitProcess(0)
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
@@ -183,7 +184,7 @@ class MainActivity : AppCompatActivity()  {
             val now = Calendar.getInstance()
             var date = ""
             var time: String
-            val timePicker = TimePickerDialog(this, TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            val timePicker = TimePickerDialog(this, { view, hourOfDay, minute ->
                 val selectedTime = Calendar.getInstance()
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
