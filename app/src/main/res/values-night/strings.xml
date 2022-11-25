@@ -5,6 +5,5 @@
     <string name="select_time">Select Time</string>
     <string name="start_swiping">Start Swiping</string>
     <string name="swipe_to_eat">Swipe to Eat</string>
-    <string name="let_swipe">Let\'s Swipe!</string>
     <string name="none_available">There are no available restaurants open at the location you entered, for the time you entered. Please modify your preferences and try again!</string>
 </resources>
