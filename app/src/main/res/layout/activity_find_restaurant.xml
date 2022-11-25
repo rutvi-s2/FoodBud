@@ -31,20 +31,21 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:scaleType="centerCrop"
-        android:text="Find your Restaurant"
+        android:text="@string/find_your_restaurant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.031"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/surprise_me_button"
         android:layout_width="329dp"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:text="Surprise Me"
+        android:text="@string/surprise_me"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
         android:layout_height="55dp"
         android:layout_marginBottom="16dp"
         android:scaleType="centerCrop"
-        android:text="Start Over"
+        android:text="@string/start_over"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

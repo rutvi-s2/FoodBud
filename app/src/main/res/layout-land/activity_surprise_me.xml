@@ -9,7 +9,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".SurpriseMeActivity">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -41,12 +41,12 @@
                 android:layout_width="319dp"
                 android:layout_height="27dp"
                 android:autoSizeMaxTextSize="40sp"
-                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMinTextSize="11sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:scaleType="centerCrop"
-                android:text="Casa de Mariscos"
+                android:text="@string/casa_de_mariscos"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -54,14 +54,15 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_image"
                 app:layout_constraintTop_toBottomOf="@id/restaurant_grid_image"
-                app:layout_constraintVertical_bias="0.016" />
+                app:layout_constraintVertical_bias="0.016"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/restaurant_grid_distance"
                 android:layout_width="293dp"
                 android:layout_height="35dp"
                 android:autoSizeMaxTextSize="30sp"
-                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMinTextSize="11sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:scaleType="centerCrop"
@@ -71,14 +72,15 @@
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_location"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="3 miles from current location" />
+                tools:text="3 miles from current location"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/restaurant_grid_location"
                 android:layout_width="320dp"
                 android:layout_height="70dp"
                 android:autoSizeMaxTextSize="40sp"
-                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMinTextSize="11sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="sans-serif-medium"
@@ -89,14 +91,15 @@
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_reviews"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="1234 Rio Grande St, Austin TX 78705" />
+                tools:text="1234 Rio Grande St, Austin TX 78705"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/restaurant_grid_reviews"
                 android:layout_width="320dp"
                 android:layout_height="40dp"
                 android:autoSizeMaxTextSize="30sp"
-                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMinTextSize="11sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="sans-serif-light"
@@ -107,7 +110,8 @@
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_name"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="1234 reviews" />
+                tools:text="1234 reviews"
+                tools:targetApi="o" />
 
             <Button
                 android:id="@+id/back"
@@ -115,7 +119,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="16dp"
                 android:scaleType="centerCrop"
-                android:text="Back"
+                android:text="@string/back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/restaurant_grid_distance"
                 app:layout_constraintHorizontal_bias="0.45"
@@ -129,6 +133,7 @@
                 tools:layout_editor_absoluteX="21dp"
                 tools:layout_editor_absoluteY="413dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="@string/surprise_me_image"
                 app:layout_constraintEnd_toStartOf="@+id/restaurant_grid_reviews"
                 app:layout_constraintHorizontal_bias="0.01"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
@@ -142,6 +147,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/restaurant_grid_location"
                 app:layout_constraintHorizontal_bias="0.0"
+                android:contentDescription="@string/surprise_me_pin"
                 app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_grid_reviews"
                 app:layout_constraintVertical_bias="0.02"

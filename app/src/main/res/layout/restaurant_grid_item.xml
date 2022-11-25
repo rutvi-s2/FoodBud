@@ -43,7 +43,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.18"
-            tools:text="Casa de Mariscos" />
+            tools:text="Casa de Mariscos"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/restaurant_grid_distance"
@@ -60,7 +61,8 @@
             app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
             app:layout_constraintTop_toBottomOf="@id/restaurant_grid_location"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="3 miles away" />
+            tools:text="3 miles away"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/restaurant_grid_location"
@@ -78,7 +80,8 @@
             app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
             app:layout_constraintTop_toBottomOf="@id/restaurant_grid_name"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="1234 Rio Grande St, Austin TX 78705" />
+            tools:text="1234 Rio Grande St, Austin TX 78705"
+            tools:targetApi="o" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

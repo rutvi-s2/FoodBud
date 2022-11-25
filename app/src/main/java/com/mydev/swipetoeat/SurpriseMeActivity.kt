@@ -26,15 +26,17 @@ class SurpriseMeActivity : AppCompatActivity() {
         val restaurant: YelpRestaurant = DataSource.swipedRightRestaurants[extras?.getInt("restaurantIndex")!!]
         binding.restaurantGridName.text = restaurant.name
         binding.restaurantGridLocation.text = restaurant.location.displayLocation()
-        binding.restaurantGridReviews.text = restaurant.numReviews.toString() + " reviews"
-        binding.restaurantGridDistance.text = restaurant.displayDistance() + " from current location"
+        val restaurantGridReviewsText = restaurant.numReviews.toString() + " reviews"
+        binding.restaurantGridReviews.text = restaurantGridReviewsText
+        val restaurantGridDistanceText = restaurant.displayDistance() + " from current location"
+        binding.restaurantGridDistance.text = restaurantGridDistanceText
         // Declaring executor to parse the URL
         val executor = Executors.newSingleThreadExecutor()
         // Once the executor parses the URL and receives the image, handler will load it
         // in the ImageView
         val handler = Handler(Looper.getMainLooper())
         // Initializing the image
-        var image: Bitmap? = null
+        var image: Bitmap?
         // Only for Background process (can take time depending on the Internet speed)
         executor.execute {
             // Image URL
@@ -59,7 +61,7 @@ class SurpriseMeActivity : AppCompatActivity() {
 
 
         // back button
-        binding.back?.setOnClickListener {
+        binding.back.setOnClickListener {
             val intent = Intent(this, FindRestaurantActivity::class.java)
             startActivity(intent)
         }
