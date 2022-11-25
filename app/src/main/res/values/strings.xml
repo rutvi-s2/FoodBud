@@ -8,9 +8,12 @@
     <string name="start_swiping">Start Swiping</string>
     <string name="swipe_to_eat">Swipe to Eat</string>
     <string name="todo">TODO</string>
-    <string name="let_swipe">Let\'s Swipe!</string>
     <string name="none_available">There are no available restaurants open at the location you entered, for the time you entered. Please modify your preferences and try again!</string>
     <string name="swiped_all">WOOHOO! You are done swiping. Click the button below to proceed!</string>
     <string name="go_back">Go Back</string>
     <string name="done_swiping">Done Swiping</string>
+    <string name="reset">Reset</string>
+    <string name="thumbs_up">thumbs up animation on swipe right</string>
+    <string name="thumbs_down">thumbs down animation on swipe left</string>
+    <string name="lets_swipe">Let\'s Swipe!</string>
 </resources>
