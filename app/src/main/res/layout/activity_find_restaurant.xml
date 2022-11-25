@@ -37,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.031"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/surprise_me_button"
