@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fillViewport="true"
     tools:context=".SwipeActivity">
-        <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:orientation="vertical"-->
-        <!--        android:layout_height="match_parent"-->
-        <!--        tools:context=".SwipeActivity">-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                tools:context=".SwipeActivity">
 
         <TextView
             android:id="@+id/letsSwipeName"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:autoSizeMaxTextSize="50sp"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:autoSizeMaxTextSize="80sp"
             android:autoSizeMinTextSize="12sp"
             android:autoSizeStepGranularity="2sp"
@@ -60,22 +60,22 @@
             tools:targetApi="o" />
 
 
-        <com.yalantis.library.Koloda
-            android:id="@+id/koloda"
-            android:layout_width="393dp"
-            android:layout_height="500dp"
-            android:scaleType="centerCrop"
-            app:koloda_card_layout="@layout/item_koloda"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
-            app:layout_constraintVertical_bias="0.0">
+                    <com.yalantis.library.Koloda
+                        android:id="@+id/koloda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:koloda_card_layout="@layout/item_koloda"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
+                        app:layout_constraintVertical_bias="0.0">
 
-        </com.yalantis.library.Koloda>
+                    </com.yalantis.library.Koloda>
 
-        <TextView
+                    <TextView
             android:id="@+id/endText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
         <Button
             android:id="@+id/done_swiping"
             android:layout_width="150dp"
-            android:layout_height="71dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:text="@string/done_swiping"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -159,7 +159,7 @@
         <Button
             android:id="@+id/reset"
             android:layout_width="130dp"
-            android:layout_height="71dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:text="@string/reset"
             android:textColor="#311B92"
@@ -199,4 +199,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
