@@ -10,6 +10,7 @@
     <string name="todo">TODO</string>
     <string name="none_available">There are no available restaurants open at the location you entered, for the time you entered. Please modify your preferences and try again!</string>
     <string name="swiped_all">WOOHOO! You are done swiping. Click the button below to proceed!</string>
+    <string name="swiped_all_land">WOOHOO! You are done swiping. Click "done swiping" to proceed!</string>
     <string name="go_back">Go Back</string>
     <string name="done_swiping">Done Swiping</string>
     <string name="reset">Reset</string>

@@ -62,8 +62,8 @@
 
         <com.yalantis.library.Koloda
             android:id="@+id/koloda"
-            android:layout_width="345dp"
-            android:layout_height="305dp"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
             android:scaleType="centerCrop"
             app:koloda_card_layout="@layout/item_koloda_land"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,28 +71,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
             app:layout_constraintVertical_bias="0.145">
-
-                <TextView
-                    android:id="@+id/endText"
-                    android:layout_width="match_parent"
-                    android:layout_height="243dp"
-                    android:autoSizeMaxTextSize="80sp"
-                    android:autoSizeMinTextSize="12sp"
-                    android:autoSizeStepGranularity="2sp"
-                    android:autoSizeTextType="uniform"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:scaleType="centerCrop"
-                    android:text="@string/none_available"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#B0F44336"
-                    android:textSize="30sp"
-                    android:textStyle="italic"
-                    android:visibility="invisible"
-                    tools:targetApi="o" />
         </com.yalantis.library.Koloda>
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/none_available"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#B0F44336"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/koloda"
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
+            app:layout_constraintVertical_bias="0.25"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/doneSwipingText"
@@ -105,7 +108,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:scaleType="centerCrop"
-            android:text="@string/swiped_all"
+            android:text="@string/swiped_all_land"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -122,41 +125,49 @@
 
         <Button
             android:id="@+id/start_over"
-            android:layout_width="150dp"
-            android:layout_height="71dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:scaleType="centerCrop"
             android:text="@string/go_back"
             android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/reset"
-            app:layout_constraintEnd_toStartOf="@+id/koloda"
-            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/desiredCuisine"
-            app:layout_constraintVertical_bias="0.045" />
+            app:layout_constraintTop_toBottomOf="@+id/endText"
+            app:layout_constraintVertical_bias="0.128" />
 
         <Button
             android:id="@+id/done_swiping"
-            android:layout_width="150dp"
-            android:layout_height="71dp"
-            android:layout_marginBottom="60dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
             android:scaleType="centerCrop"
             android:text="@string/done_swiping"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toEndOf="@id/koloda" />
+            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintStart_toEndOf="@id/koloda"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
 
         <Button
             android:id="@+id/reset"
-            android:layout_width="130dp"
-            android:layout_height="71dp"
-            android:layout_marginBottom="60dp"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:scaleType="center"
             android:text="@string/reset"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/koloda"
-            app:layout_constraintHorizontal_bias="0.29"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/thumbs_up"
