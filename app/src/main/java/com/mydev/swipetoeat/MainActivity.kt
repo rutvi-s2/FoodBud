@@ -196,12 +196,13 @@ class MainActivity : AppCompatActivity()  {
 //                }
                 val displayFormat = SimpleDateFormat("HH:mm")
                 val parseFormat = SimpleDateFormat("hh:mm a")
-                val myTime = parseFormat.parse(time)
+                val myTime : Date = parseFormat.parse(time)
 
                 timeInputStr = date + " " + displayFormat.format(myTime) + ":00.000"
-
-                val df = SimpleDateFormat("MMM dd yyyy hh:mm:ss.SSS")
+                Log.d("my time one", timeInputStr)
+                val df = SimpleDateFormat("MMM dd yyyy HH:mm:ss.SSS")
                 val myDt : Date = df.parse(timeInputStr)
+                Log.d("my time not parsed", myDt.toString())
                 timeInput = (myDt.time / 1000).toInt()
 
                 Log.d("my time", timeInput.toString())
