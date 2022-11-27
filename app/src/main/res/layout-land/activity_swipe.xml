@@ -127,7 +127,7 @@
             android:id="@+id/start_over"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+
             android:scaleType="centerCrop"
             android:text="@string/go_back"
             android:visibility="invisible"
