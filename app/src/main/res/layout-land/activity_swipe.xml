@@ -71,26 +71,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredCuisine"
             app:layout_constraintVertical_bias="0.145">
-
-                <TextView
-                    android:id="@+id/endText"
-                    android:layout_width="300dp"
-                    android:layout_height="243dp"
-                    android:autoSizeStepGranularity="2sp"
-                    android:autoSizeTextType="uniform"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:scaleType="centerCrop"
-                    android:text="@string/none_available"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#B0F44336"
-                    android:textSize="30sp"
-                    android:textStyle="italic"
-                    android:visibility="invisible"
-                    tools:targetApi="o" />
         </com.yalantis.library.Koloda>
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/none_available"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#B0F44336"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@id/koloda"
+            app:layout_constraintEnd_toEndOf="@id/koloda"
+            app:layout_constraintTop_toTopOf="@id/koloda"
+            app:layout_constraintBottom_toBottomOf="@id/koloda"
+            android:visibility="invisible"
+
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/doneSwipingText"
@@ -120,16 +125,18 @@
 
         <Button
             android:id="@+id/start_over"
-            android:layout_width="150dp"
-            android:layout_height="71dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:scaleType="centerCrop"
             android:text="@string/go_back"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/reset"
-            app:layout_constraintTop_toStartOf="@+id/koloda"
-            app:layout_constraintHorizontal_bias="0.372"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.045" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/done_swiping"
