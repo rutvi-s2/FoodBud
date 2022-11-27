@@ -150,19 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn" />
 
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="145dp"
-            android:layout_height="50dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/letSwipeName"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.054"
-            android:contentDescription="@string/logo_image"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+
 
         <TextView
             android:id="@+id/selected_time_text"
