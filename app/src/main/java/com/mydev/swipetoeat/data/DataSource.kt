@@ -3,7 +3,7 @@ package com.mydev.swipetoeat.data
 import com.mydev.swipetoeat.YelpRestaurant
 
 /**
- * An object to generate a static list of movie reviews from user
+ * An object to generate different restaurant variables depending on user input
  */
 object DataSource {
 
@@ -13,4 +13,6 @@ object DataSource {
     var cuisineAlias = listOf("italian", "chinese", "indpak", "mexican", "tradamerican", "french", "greek", "thai", "japanese", "turkish", "moroccan", "korean", "german", "southafrican", "lebanese", "portuguese", "vietnamese", "belgian", "pakistani", "australian", "brazilian", "himalayan", "russian", "filipino", "peruvian", "ethiopian")
 
     var swipedRightRestaurants: MutableList<YelpRestaurant> = mutableListOf()
+
+    var countSwiped = 0
 }
