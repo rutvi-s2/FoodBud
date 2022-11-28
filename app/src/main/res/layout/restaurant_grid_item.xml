@@ -3,85 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
     app:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="400dp"
-        android:layout_height="163dp">
-
-        <ImageView
-            android:id="@+id/restaurant_grid_image"
-            android:layout_width="191dp"
-            android:layout_height="162dp"
-            android:contentDescription="@string/restaurant_grid_image"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.879"
-            app:layout_constraintStart_toEndOf="@+id/restaurant_grid_name"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/restaurant_grid_name"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:autoSizeMaxTextSize="24sp"
-            android:autoSizeMinTextSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeMinTextSize="18sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
             android:scaleType="centerCrop"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/restaurant_grid_image"
-            app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constrainedWidth="true"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.18"
-            tools:text="Casa de Mariscos"
-            tools:targetApi="o" />
-
-        <TextView
-            android:id="@+id/restaurant_grid_distance"
-            android:layout_width="174dp"
-            android:layout_height="34dp"
-            android:autoSizeMaxTextSize="20sp"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeStepGranularity="2sp"
-            android:autoSizeTextType="uniform"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
-            app:layout_constraintTop_toBottomOf="@id/restaurant_grid_location"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="3 miles away"
+            tools:text="Casa de Mariscos Casa de Mariscos"
             tools:targetApi="o" />
 
         <TextView
             android:id="@+id/restaurant_grid_location"
-            android:layout_width="174dp"
-            android:layout_height="62dp"
-            android:autoSizeMaxTextSize="24sp"
-            android:autoSizeMinTextSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeMinTextSize="18sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="#E91E63"
+            app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@id/restaurant_grid_image"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/restaurant_grid_name"
             app:layout_constraintTop_toBottomOf="@id/restaurant_grid_name"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="1234 Rio Grande St, Austin TX 78705"
+            tools:targetApi="o"
+            tools:text="1234 Rio Grande St, Austin TX 78705" />
+
+        <TextView
+            android:id="@+id/restaurant_grid_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/restaurant_grid_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toBottomOf="@id/restaurant_grid_location"
+            tools:text="3 miles away"
             tools:targetApi="o" />
+
+        <ImageView
+            android:id="@+id/restaurant_grid_image"
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:contentDescription="@string/restaurant_grid_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
