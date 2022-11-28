@@ -30,4 +30,5 @@
     <string name="surprise_me">Surprise Me</string>
     <string name="start_over">Start Over</string>
     <string name="done">done</string>
+    <string name="loading_image_for_delay">loading image for delay</string>
 </resources>

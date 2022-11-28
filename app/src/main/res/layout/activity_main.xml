@@ -27,7 +27,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/locationName"
@@ -42,7 +43,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/letSwipeName" />
+            app:layout_constraintTop_toBottomOf="@id/letSwipeName"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/location"
@@ -59,7 +61,8 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/locationName" />
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            tools:targetApi="o" />
 
         <ImageView
             android:id="@+id/locationPin"
@@ -85,7 +88,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/location" />
+            app:layout_constraintTop_toBottomOf="@id/location"
+            tools:targetApi="o" />
 
         <Spinner
             android:id="@+id/desiredCuisineSpinner"
@@ -109,7 +113,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/desiredCuisineSpinner" />
+            app:layout_constraintTop_toBottomOf="@id/desiredCuisineSpinner"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/desiredTimeBtn"
@@ -123,7 +128,8 @@
             android:text="@string/select_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/desiredTimeName" />
+            app:layout_constraintTop_toBottomOf="@id/desiredTimeName"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/selected_time_text"
@@ -138,7 +144,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/desiredTimeBtn"
-            tools:text="December 21, 2022 10:15 pm" />
+            tools:text="December 21, 2022 10:15 pm"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/start_swiping"
@@ -151,7 +158,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/selected_time_text"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:targetApi="o" />
+
+                <ImageView
+                    android:id="@+id/loading_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible"
+                    android:foregroundGravity="center"
+                    android:contentDescription="@string/loading_image_for_delay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/start_swiping"
+                    app:srcCompat="@drawable/loading" />
 
 
 

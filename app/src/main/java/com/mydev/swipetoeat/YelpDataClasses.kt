@@ -6,9 +6,6 @@ data class YelpSearchResult(
     @SerializedName("businesses") val restaurants: List<YelpRestaurant>
 )
 
-data class YelpSearchResultCuisine(
-    @SerializedName("categories") val cuisines: List<YelpCategory>
-)
 
 data class YelpRestaurant(
     //no need to specify serialized name if name of parameter in the object exactly matches var name in Kotlin

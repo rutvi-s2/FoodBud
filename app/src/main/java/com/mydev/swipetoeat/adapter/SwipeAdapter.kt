@@ -18,7 +18,7 @@ import com.mydev.swipetoeat.YelpRestaurant
 
 
 class SwipeAdapter(
-    private val list: List<YelpRestaurant>,
+    list: List<YelpRestaurant>,
     private val context: Context)
     : BaseAdapter() {
     // initialize the data using the restaurants List found in DataSource
@@ -47,7 +47,7 @@ class SwipeAdapter(
             )
         }
 
-        // get the TextView for restuarant image
+        // get the TextView for restaurant image
         val restaurantImageView: ImageView = convertV!!.findViewById(R.id.koloda_image)
         Log.d("restaurntsinswipeadap", DataSource.restaurants.toString())
 
