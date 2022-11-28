@@ -165,7 +165,7 @@ class MainActivity : AppCompatActivity()  {
                 GlobalScope.launch {
                     // function call to retrieve list of restaurants from yelp
                     yelpAPIForRestaurants()
-                    delay(1500L)
+                    delay(2000L)
                     val intent = Intent(this@MainActivity, SwipeActivity::class.java)
                     intent.putExtra("chosen cuisine", chosenCuisine)
                     startActivity(intent)
