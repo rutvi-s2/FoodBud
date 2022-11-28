@@ -131,7 +131,7 @@
         <Button
             android:id="@+id/done_swiping"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:scaleType="centerCrop"
             android:text="@string/done"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -140,7 +140,7 @@
         <Button
             android:id="@+id/reset"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginStart="72dp"
             android:scaleType="centerCrop"
             android:text="@string/reset"
