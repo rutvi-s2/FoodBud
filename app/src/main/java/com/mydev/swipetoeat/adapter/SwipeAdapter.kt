@@ -18,10 +18,11 @@ import com.mydev.swipetoeat.YelpRestaurant
 
 
 class SwipeAdapter(
+    private val list: List<YelpRestaurant>,
     private val context: Context)
     : BaseAdapter() {
     // initialize the data using the restaurants List found in DataSource
-    private var restaurantOpts: List<YelpRestaurant> = DataSource.restaurants
+    private var restaurantOpts: List<YelpRestaurant> = list
 
 
     override fun getCount(): Int {

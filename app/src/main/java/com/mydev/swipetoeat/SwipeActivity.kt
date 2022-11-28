@@ -21,7 +21,7 @@ class SwipeActivity : AppCompatActivity() {
     private lateinit var koloda: Koloda
     var toast : Toast? = null
     //    var mediaPlayer : MediaPlayer? = null
-    var countSwiped : Int = 0
+//    var countSwiped : Int = 0
     private lateinit var binding : ActivitySwipeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +52,12 @@ class SwipeActivity : AppCompatActivity() {
         koloda = findViewById(R.id.koloda)
 
         list = (DataSource.restaurants).toCollection(mutableListOf())
-        adapter = SwipeAdapter(this)
+        var start = 0
+        while (start < DataSource.countSwiped){
+            list.removeFirst()
+            start++
+        }
+        adapter = SwipeAdapter(list, this)
         koloda.adapter = adapter
         Log.d("the first length is", list.size.toString())
 
@@ -81,7 +86,7 @@ class SwipeActivity : AppCompatActivity() {
                     binding.thumbsDown.visibility = View.GONE
                 }, 1000)
 
-                countSwiped++
+                DataSource.countSwiped++
                 if (toast!= null) {
                     toast!!.cancel()
                 }
@@ -116,7 +121,7 @@ class SwipeActivity : AppCompatActivity() {
                 }, 1000)
 
 
-                countSwiped++
+                DataSource.countSwiped++
                 if (toast!= null) {
                     toast!!.cancel()
                 }
@@ -141,10 +146,11 @@ class SwipeActivity : AppCompatActivity() {
         restaurantsPage.setOnClickListener {
 
             var start = 0
-            while (start < countSwiped){
+            while (start < DataSource.countSwiped){
                 list.removeFirst()
                 start++
             }
+            DataSource.countSwiped = 0
             val intent = Intent(this, FindRestaurantActivity::class.java)
             startActivity(intent)
         }
@@ -161,6 +167,7 @@ class SwipeActivity : AppCompatActivity() {
         reset.setOnClickListener{
             list = (DataSource.restaurants).toCollection(mutableListOf())
             DataSource.swipedRightRestaurants.clear()
+            DataSource.countSwiped = 0
             finish()
             startActivity(intent)
             Log.d("the second length is", list.size.toString())
