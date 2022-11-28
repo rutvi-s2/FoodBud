@@ -2,7 +2,6 @@ package com.mydev.swipetoeat
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -179,12 +178,11 @@ class MainActivity : AppCompatActivity()  {
 
 
         val selectTimeButton = findViewById<Button>(R.id.desiredTimeBtn)
-        val formatter = SimpleDateFormat("MMM dd yyyy", Locale.US)
         val timeFormatter = SimpleDateFormat("hh:mm a", Locale.US)
         selectTimeButton.setOnClickListener{
             val now = Calendar.getInstance()
             var time: String
-            val timePicker = TimePickerDialog(this, { view, hourOfDay, minute ->
+            val timePicker = TimePickerDialog(this, { _, hourOfDay, minute ->
                 val selectedTime = Calendar.getInstance()
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
@@ -194,9 +192,9 @@ class MainActivity : AppCompatActivity()  {
                 val parseFormat = SimpleDateFormat("hh:mm a")
                 val myTime : Date = parseFormat.parse(time)
 
-                val sdf : SimpleDateFormat  = SimpleDateFormat("MMM dd yyyy");
+                val sdf = SimpleDateFormat("MMM dd yyyy")
                 val c : Calendar = Calendar.getInstance()
-                val date = sdf.format(c.getTime())
+                val date = sdf.format(c.time)
 
                 timeInputStr = date + " " + displayFormat.format(myTime) + ":00.000"
                 Log.d("my time one", timeInputStr)
