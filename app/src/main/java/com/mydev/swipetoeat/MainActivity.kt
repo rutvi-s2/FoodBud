@@ -161,6 +161,7 @@ class MainActivity : AppCompatActivity()  {
                 val toast = Toast.makeText(applicationContext, text, duration)
                 toast.show()
             } else {
+                binding.loadingImage.visibility = View.VISIBLE
                 // intent to go to start swiping page
                 GlobalScope.launch {
                     // function call to retrieve list of restaurants from yelp

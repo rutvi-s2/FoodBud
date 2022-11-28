@@ -153,6 +153,18 @@
             app:layout_constraintTop_toBottomOf="@id/selected_time_text"
             app:layout_constraintStart_toStartOf="parent" />
 
+                <ImageView
+                    android:id="@+id/loading_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible"
+                    android:foregroundGravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/start_swiping"
+                    app:srcCompat="@drawable/loading" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
