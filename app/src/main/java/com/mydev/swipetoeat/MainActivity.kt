@@ -182,21 +182,20 @@ class MainActivity : AppCompatActivity()  {
         val timeFormatter = SimpleDateFormat("hh:mm a", Locale.US)
         selectTimeButton.setOnClickListener{
             val now = Calendar.getInstance()
-            var date = ""
             var time: String
             val timePicker = TimePickerDialog(this, { view, hourOfDay, minute ->
                 val selectedTime = Calendar.getInstance()
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
                 time = timeFormatter.format(selectedTime.time)
-//                timeInputStr = if(time.substring(time.length- 2, time.length-1) == "P"){
-//                    date + " " + (Calendar.HOUR_OF_DAY + 12).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
-//                } else{
-//                    date + " " + (Calendar.HOUR_OF_DAY).toString() + ":" + Calendar.MINUTE + ":00.000 UTC"
-//                }
+
                 val displayFormat = SimpleDateFormat("HH:mm")
                 val parseFormat = SimpleDateFormat("hh:mm a")
                 val myTime : Date = parseFormat.parse(time)
+
+                val sdf : SimpleDateFormat  = SimpleDateFormat("MMM dd yyyy");
+                val c : Calendar = Calendar.getInstance()
+                val date = sdf.format(c.getTime())
 
                 timeInputStr = date + " " + displayFormat.format(myTime) + ":00.000"
                 Log.d("my time one", timeInputStr)
@@ -211,15 +210,6 @@ class MainActivity : AppCompatActivity()  {
                 now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), false)
             timePicker.show()
 
-            val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, year, month, dayOfMonth ->
-                val selectedDate = Calendar.getInstance()
-                selectedDate.set(Calendar.YEAR, year)
-                selectedDate.set(Calendar.MONTH, month)
-                selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-                date = formatter.format(selectedDate.time)
-            },
-                now.get(Calendar.YEAR), now.get(Calendar.MONTH), now.get(Calendar.DAY_OF_MONTH))
-            datePicker.show()
 
         }
     }
