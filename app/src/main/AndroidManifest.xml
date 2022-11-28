@@ -21,17 +21,19 @@
         <activity
             android:name=".SurpriseMeActivity"
             android:exported="false"
-            android:configChanges="screenLayout|screenSize"/>
+            android:configChanges="screenLayout|keyboardHidden|orientation|screenSize"/>
         <activity
             android:name=".FindRestaurantActivity"
             android:exported="false"
-            android:configChanges="screenLayout|screenSize"/>
+            android:configChanges="screenLayout|keyboardHidden|orientation|screenSize"/>
         <activity
             android:name=".SwipeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="screenLayout|keyboardHidden|orientation|screenSize"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:configChanges="screenLayout|keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
