@@ -6,19 +6,12 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".SwipeActivity">
-        <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:orientation="vertical"-->
-        <!--        android:layout_height="match_parent"-->
-        <!--        tools:context=".SwipeActivity">-->
 
 
         <TextView
             android:id="@+id/letsSwipeName"
             android:layout_width="235dp"
-            android:layout_height="24dp"
-            android:autoSizeMaxTextSize="30sp"
-            android:autoSizeMinTextSize="15sp"
+            android:layout_height="30dp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
@@ -41,8 +34,6 @@
             android:id="@+id/desiredCuisine"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:autoSizeMaxTextSize="20sp"
-            android:autoSizeMinTextSize="10sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed-medium"
@@ -95,7 +86,6 @@
             app:layout_constraintTop_toBottomOf="@+id/desiredCuisine"
             app:layout_constraintBottom_toBottomOf="@id/koloda"
             android:visibility="invisible"
-
             tools:targetApi="o" />
 
         <TextView
@@ -128,7 +118,6 @@
             android:id="@+id/start_over"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:scaleType="centerCrop"
             android:text="@string/go_back"
             android:visibility="invisible"
@@ -144,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:text="done"
+            android:text="@string/done"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/koloda" />
 
@@ -187,4 +176,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
