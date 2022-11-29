@@ -53,8 +53,8 @@
 
         <com.yalantis.library.Koloda
             android:id="@+id/koloda"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
+            android:layout_width="260dp"
+            android:layout_height="300dp"
             android:scaleType="centerCrop"
             app:koloda_card_layout="@layout/item_koloda_land"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -141,7 +141,6 @@
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:layout_marginStart="72dp"
             android:scaleType="centerCrop"
             android:text="@string/reset"
             app:layout_constraintBottom_toBottomOf="parent"
