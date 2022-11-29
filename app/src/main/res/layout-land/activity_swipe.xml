@@ -54,9 +54,9 @@
         <com.yalantis.library.Koloda
             android:id="@+id/koloda"
             android:layout_width="260dp"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            app:koloda_card_layout="@layout/item_koloda_land"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:koloda_card_layout="@layout/item_koloda"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
